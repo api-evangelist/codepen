@@ -1,0 +1,41 @@
+---
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
+provider: CodePen
+providerId: codepen
+created: '2026-06-12'
+modified: '2026-06-12'
+reconciled: true
+tags:
+  - Rate Limiting
+description: CodePen does not publicly document rate limits for its oEmbed or Embed APIs; no authentication is required for the oEmbed and POST to Prefill endpoints, and no explicit throttling thresholds have been published.
+sources:
+  - https://blog.codepen.io/documentation/oembed/
+  - https://blog.codepen.io/documentation/embedded-pens/
+  - https://blog.codepen.io/documentation/prefill/
+headers:
+  retryAfter: Retry-After
+responseCodes:
+  throttled: 429
+limits:
+  - name: oEmbed API
+    scope: ip
+    metric: requests_per_minute
+    limit: -1
+    timeFrame: minute
+    notes: No rate limit is publicly documented for the oEmbed endpoint.
+
+  - name: Embed Script (CDN)
+    scope: ip
+    metric: requests_per_minute
+    limit: -1
+    timeFrame: minute
+    notes: The embed script (public.codepenassets.com) is served via CDN with no published throttling policy.
+
+  - name: POST to Prefill
+    scope: ip
+    metric: requests_per_minute
+    limit: -1
+    timeFrame: minute
+    notes: No rate limit is publicly documented; endpoint is unauthenticated.

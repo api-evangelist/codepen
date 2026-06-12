@@ -1,0 +1,226 @@
+---
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: CodePen
+providerId: codepen
+created: '2026-06-12'
+modified: '2026-06-12'
+reconciled: true
+tags:
+  - Developer Tools
+  - Front-End Development
+  - Code Playground
+description: CodePen offers a free tier and three paid PRO tiers (Starter, Developer, Super) plus a Team plan, with pricing ranging from free to $26/month per user.
+sources:
+  - https://codepen.io/pricing
+plans:
+  - id: codepen-free
+    name: Free
+    type: free
+    description: Unlimited public Pens and Collections, unlimited templates, basic editor features, and standard embed capability.
+    entries:
+      - label: Public Pens
+        name: public_pens
+        type: boolean
+        metric: pens
+        limit: -1
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '0'
+        userMultiplied: false
+      - label: Projects
+        name: projects
+        type: quota
+        metric: projects
+        limit: 0
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '0'
+        userMultiplied: false
+      - label: Asset Hosting Storage
+        name: asset_storage_gb
+        type: quota
+        metric: GB
+        limit: 0
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '0'
+        userMultiplied: false
+      - label: Collab Mode
+        name: collab_mode
+        type: boolean
+        metric: feature
+        limit: 0
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '0'
+        userMultiplied: false
+
+  - id: codepen-starter
+    name: Starter
+    type: paid
+    description: Entry-level PRO plan with private Pens, asset hosting (2 GB), 10 Projects, up to 2-person Collab Mode, and unlimited embed themes.
+    entries:
+      - label: Monthly Price
+        name: monthly_price
+        type: boolean
+        metric: USD/month
+        limit: 1
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '8'
+        userMultiplied: false
+      - label: Asset Hosting Storage
+        name: asset_storage_gb
+        type: quota
+        metric: GB
+        limit: 2
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '0'
+        userMultiplied: false
+      - label: File Size Limit
+        name: file_size_mb
+        type: quota
+        metric: MB
+        limit: 5
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: '0'
+        userMultiplied: false
+      - label: Projects
+        name: projects
+        type: quota
+        metric: projects
+        limit: 10
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '0'
+        userMultiplied: false
+      - label: Files per Project
+        name: files_per_project
+        type: quota
+        metric: files
+        limit: 50
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: '0'
+        userMultiplied: false
+      - label: Collab Mode Users
+        name: collab_users
+        type: quota
+        metric: users
+        limit: 2
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: '0'
+        userMultiplied: false
+
+  - id: codepen-developer
+    name: Developer
+    type: paid
+    description: Mid-tier PRO plan with 10 GB asset hosting, larger per-file limit (10 MB), and all Starter features.
+    entries:
+      - label: Monthly Price
+        name: monthly_price
+        type: boolean
+        metric: USD/month
+        limit: 1
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '12'
+        userMultiplied: false
+      - label: Asset Hosting Storage
+        name: asset_storage_gb
+        type: quota
+        metric: GB
+        limit: 10
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '0'
+        userMultiplied: false
+      - label: File Size Limit
+        name: file_size_mb
+        type: quota
+        metric: MB
+        limit: 10
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: '0'
+        userMultiplied: false
+
+  - id: codepen-super
+    name: Super
+    type: paid
+    description: Top-tier individual PRO plan with 20 GB asset hosting, 15 MB per-file limit, and up to 10-person Collab Mode.
+    entries:
+      - label: Monthly Price
+        name: monthly_price
+        type: boolean
+        metric: USD/month
+        limit: 1
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '26'
+        userMultiplied: false
+      - label: Asset Hosting Storage
+        name: asset_storage_gb
+        type: quota
+        metric: GB
+        limit: 20
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '0'
+        userMultiplied: false
+      - label: File Size Limit
+        name: file_size_mb
+        type: quota
+        metric: MB
+        limit: 15
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: '0'
+        userMultiplied: false
+      - label: Collab Mode Users
+        name: collab_users
+        type: quota
+        metric: users
+        limit: 10
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: '0'
+        userMultiplied: false
+
+  - id: codepen-team
+    name: Team
+    type: paid
+    description: Per-user team plan with shared workspace, team profiles, and collaborative features for organizations.
+    entries:
+      - label: Monthly Price per User
+        name: monthly_price_per_user
+        type: boolean
+        metric: USD/user/month
+        limit: 1
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '12'
+        userMultiplied: true

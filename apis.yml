@@ -1,0 +1,121 @@
+---
+aid: codepen
+name: CodePen
+description: >-
+  CodePen is a social development environment for front-end designers and
+  developers, offering a browser-based playground for writing and sharing
+  HTML, CSS, and JavaScript. The platform allows users to create "Pens"
+  (interactive code snippets) and share them publicly or privately. CodePen
+  provides developer-facing APIs including an Embed API for displaying Pens
+  on external sites, a POST to Prefill API for programmatically opening the
+  Pen editor with pre-populated code, Prefill Embeds for transforming
+  existing code blocks into interactive sandboxes, and an oEmbed endpoint
+  for standard embed discovery. The platform is widely used by educators,
+  tutorial authors, and documentation teams who need live, interactive
+  code examples embedded in external pages.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Developer Tools
+  - Front-End Development
+  - Code Playground
+  - Embeds
+  - Education
+url: https://raw.githubusercontent.com/api-evangelist/codepen/refs/heads/main/apis.yml
+created: '2026-06-12'
+modified: '2026-06-12'
+specificationVersion: '0.19'
+apis:
+  - aid: codepen:oembed
+    name: CodePen oEmbed API
+    description: >-
+      Standard oEmbed endpoint that returns a rich embed payload (iframe HTML,
+      thumbnail URL, author metadata) for any public CodePen Pen URL. Supports
+      JSON and JSONP response formats and an optional height parameter.
+    humanURL: https://blog.codepen.io/documentation/oembed/
+    baseURL: https://codepen.io/api/oembed
+    tags:
+      - oEmbed
+      - Embeds
+      - Front-End Development
+    properties:
+      - type: Documentation
+        url: https://blog.codepen.io/documentation/oembed/
+
+  - aid: codepen:embed
+    name: CodePen Embed API
+    description: >-
+      Client-side JavaScript API for rendering and lazy-loading embedded Pens on
+      external web pages. Uses the global window.__CPEmbed() function with
+      data-* attributes on a .codepen div to control height, theme, default tab,
+      animations, and zoom level. A __CodePenIFrameAddedToPage callback is
+      available for post-embed hooks.
+    humanURL: https://blog.codepen.io/documentation/embedded-pens/
+    baseURL: https://public.codepenassets.com/embed/index.js
+    tags:
+      - Embeds
+      - JavaScript
+      - Front-End Development
+    properties:
+      - type: Documentation
+        url: https://blog.codepen.io/documentation/embedded-pens/
+
+  - aid: codepen:post-to-prefill
+    name: CodePen POST to Prefill API
+    description: >-
+      HTTP POST endpoint that accepts JSON-encoded code and configuration and
+      opens a new (unsaved) Pen in the CodePen editor pre-populated with that
+      content. Supports HTML, CSS, and JS content fields, preprocessor choices,
+      external resources, and editor layout. No authentication is required.
+    humanURL: https://blog.codepen.io/documentation/prefill/
+    baseURL: https://codepen.io/pen/define/
+    tags:
+      - Front-End Development
+      - Developer Tools
+    properties:
+      - type: Documentation
+        url: https://blog.codepen.io/documentation/prefill/
+
+  - aid: codepen:prefill-embeds
+    name: CodePen Prefill Embeds API
+    description: >-
+      Declarative embed API that transforms existing code blocks on a web page
+      into live, interactive CodePen sandboxes without requiring users to
+      navigate away. Code is supplied via data-prefill JSON attributes and
+      pre elements; the embed script at public.codepenassets.com renders
+      an isolated iFrame. Supports HTML, CSS, and JavaScript preprocessors,
+      external stylesheets and scripts, and optional editable mode.
+    humanURL: https://blog.codepen.io/documentation/prefill-embeds/
+    baseURL: https://public.codepenassets.com/embed/index.js
+    tags:
+      - Embeds
+      - Front-End Development
+      - JavaScript
+    properties:
+      - type: Documentation
+        url: https://blog.codepen.io/documentation/prefill-embeds/
+
+common:
+  - type: Website
+    url: https://codepen.io
+  - type: Documentation
+    url: https://blog.codepen.io/documentation/
+  - type: GitHubOrganization
+    url: https://github.com/codepen
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/codepen
+  - type: Blog
+    url: https://blog.codepen.io
+  - type: Pricing
+    url: https://codepen.io/pricing
+  - type: X
+    url: https://twitter.com/CodePen
+  - type: Plans
+    url: plans/codepen-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/codepen-rate-limits.yml
+  - type: FinOps
+    url: finops/codepen-finops.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
