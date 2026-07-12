@@ -1,0 +1,34 @@
+generated: '2026-07-11'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: codepen.io
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Aug 14 02:58:23 2026 GMT
+  hsts: true
+  hsts_max_age: 31536000
+- host: blog.codepen.io
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Aug 24 07:16:00 2026 GMT
+  hsts: true
+  hsts_max_age: 31536000
+- host: public.codepenassets.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep  5 20:29:37 2026 GMT
+  hsts: null
+domains:
+- domain: codepen.io
+  dnssec: true
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: none
+- domain: codepenassets.com
+  dnssec: true
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: none
