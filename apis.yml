@@ -14,7 +14,19 @@ description: >-
   tutorial authors, and documentation teams who need live, interactive
   code examples embedded in external pages.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/codepen.png
 tags:
   - Developer Tools
   - Front-End Development
