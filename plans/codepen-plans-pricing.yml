@@ -229,3 +229,66 @@ plans:
         unit: 1
         price: '12'
         userMultiplied: true
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - free
+  units:
+  - data
+  - feature
+  - object
+  - seat
+  plans:
+  - name: Free
+    access: free
+    model: free
+    model_how: derived
+    units:
+    - data
+    - feature
+    - object
+    - other
+    periods:
+    - month
+  - name: Starter
+    access: paid
+    model: free
+    model_how: derived
+    units:
+    - data
+    - object
+    - other
+    - seat
+    periods:
+    - month
+    - per-use
+  - name: Developer
+    access: paid
+    model: free
+    model_how: derived
+    units:
+    - data
+    - other
+    periods:
+    - month
+    - per-use
+  - name: Super
+    access: paid
+    model: free
+    model_how: derived
+    units:
+    - data
+    - other
+    - seat
+    periods:
+    - month
+    - per-use
+  - name: Team
+    access: paid
+    model: free
+    model_how: derived
+    units:
+    - other
+    periods:
+    - month
