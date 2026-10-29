@@ -1,4 +1,4 @@
-# CodePen (codepen)
+# CodePen
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,46 +64,114 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-CodePen is a social development environment for front-end designers and developers, offering a browser-based playground for writing and sharing HTML, CSS, and JavaScript. The platform provides developer-facing APIs for embedding interactive Pens on external sites, programmatically pre-filling the editor, and transforming existing code blocks into live sandboxes.
+CodePen is a social development environment for front-end designers and developers, offering a browser-based playground for writing and sharing HTML, CSS, and JavaScript. The platform allows users to create "Pens" (interactive code snippets) and share them publicly or privately. CodePen provides developer-facing APIs including an Embed API for displaying Pens on external sites, a POST to Prefill API for programmatically opening the Pen editor with pre-populated code, Prefill Embeds for transforming existing code blocks into interactive sandboxes, and an oEmbed endpoint for standard embed discovery. The platform is widely used by educators, tutorial authors, and documentation teams who need live, interactive code examples embedded in external pages.
 
-APIs.json: [https://raw.githubusercontent.com/api-evangelist/codepen/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/codepen/refs/heads/main/apis.yml)
+**Areas:** Developer Tools · Front-End Development · Code Playground · Embed · Education
 
-Run on Naftiko: [https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=codepen-api-evangelist&utm_content=repo](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=codepen-api-evangelist&utm_content=repo)
+## CodePen on APIs.io
 
-## Tags
+Everything profiled for CodePen is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/codepen/](https://apis.io/providers/codepen/)** — or go straight to one of the APIs or properties below.
 
-Developer Tools, Front-End Development, Code Playground, Embeds, Education
+### APIs (4)
 
-## APIs
+- [CodePen oEmbed API](https://apis.io/apis/codepen/oembed/) — Standard oEmbed endpoint that returns a rich embed payload (iframe HTML, thumbnail URL, author metadata) for any public CodePen Pen URL. Supports JSON and…
+- [CodePen Embed API](https://apis.io/apis/codepen/embed/) — Client-side JavaScript API for rendering and lazy-loading embedded Pens on external web pages. Uses the global window.__CPEmbed() function with data-*…
+- [CodePen POST to Prefill API](https://apis.io/apis/codepen/post-to-prefill/) — HTTP POST endpoint that accepts JSON-encoded code and configuration and opens a new (unsaved) Pen in the CodePen editor pre-populated with that content.…
+- [CodePen Prefill Embeds API](https://apis.io/apis/codepen/prefill-embeds/) — Declarative embed API that transforms existing code blocks on a web page into live, interactive CodePen sandboxes without requiring users to navigate away.…
 
-- **CodePen oEmbed API** — Standard oEmbed endpoint returning rich embed payloads for public Pens. [Documentation](https://blog.codepen.io/documentation/oembed/)
-- **CodePen Embed API** — Client-side JavaScript API (window.__CPEmbed()) for rendering and lazy-loading embedded Pens. [Documentation](https://blog.codepen.io/documentation/embedded-pens/)
-- **CodePen POST to Prefill API** — HTTP POST endpoint that opens the Pen editor pre-populated with supplied code and configuration. [Documentation](https://blog.codepen.io/documentation/prefill/)
-- **CodePen Prefill Embeds API** — Declarative embed API that transforms existing code blocks into live interactive sandboxes. [Documentation](https://blog.codepen.io/documentation/prefill-embeds/)
+### Published properties
 
-## Plans / Rate Limits / FinOps
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-- [Plans & Pricing](plans/codepen-plans-pricing.yml)
-- [Rate Limits](rate-limits/codepen-rate-limits.yml)
-- [FinOps](finops/codepen-finops.yml)
+#### JSON-LD (1)
 
-## Timestamps
+Linked-data contexts for the provider's vocabulary.
 
-- Created: 2026-06-12
-- Modified: 2026-06-12
+- [Codepen Context](https://apis.io/jsonld/codepen/codepen-context/)
 
-## Common Properties
+#### Security (1)
 
-| Type | URL |
-|------|-----|
-| Website | https://codepen.io |
-| Documentation | https://blog.codepen.io/documentation/ |
-| GitHub Organization | https://github.com/codepen |
-| LinkedIn | https://www.linkedin.com/company/codepen |
-| Blog | https://blog.codepen.io |
-| Pricing | https://codepen.io/pricing |
-| X / Twitter | https://twitter.com/CodePen |
+Authentication, trust centre, and vulnerability disclosure.
 
-## Maintainers
+- [Codepen Domain Security](https://apis.io/security/codepen/codepen-domain-security/)
 
-- Kin Lane / kin@apievangelist.com
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Codepen Plans Pricing](https://apis.io/plans/codepen/codepen-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Codepen Rate Limits](https://apis.io/rate-limits/codepen/codepen-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Codepen Finops](https://apis.io/finops/codepen/codepen-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://codepen.io)
+- [Documentation](https://blog.codepen.io/documentation/)
+- [Pricing](https://codepen.io/pricing)
+- [Blog](https://blog.codepen.io)
+- [GitHub](https://github.com/codepen)
+
+## API Evangelist rating
+
+**Kin Score 16.1** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 71.4 |
+| Contract quality | 10.7 |
+| Contract governance | 0.0 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 11.9 |
+| Access clarity | 18.4 |
+
+**Agent readiness 0.6** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 10.8** — Education & Research
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/codepen/](https://apis.io/providers/codepen/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for CodePen: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/codepen/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
